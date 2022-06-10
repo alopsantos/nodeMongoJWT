@@ -1,0 +1,31 @@
+GET http://localhost:3000/
+
+###
+POST http://localhost:3000/auth/resgister
+content-type: application/json
+
+{
+    "name": "Anderson Lopes",
+    "email": "anderson@anderson.com",
+    "password":"sua senha",
+    "confirmPassword": "sua senha"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "anderson@anderson.com",
+  "password": "12345"
+}
+
+###
+GET http://localhost:3000/user/62a3ba190c46db1272385262
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTNiYTE5MGM0NmRiMTI3MjM4NTI2MiIsImlhdCI6MTY1NDg5ODk4N30.TM421wkKiq8gqaREk_UH-JLgVBdzrYKk0Zqm3rMjcaw
+
+###
+GET http://localhost:3000/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTNiYTE5MGM0NmRiMTI3MjM4NTI2MiIsImlhdCI6MTY1NDg5ODk4N30.TM421wkKiq8gqaREk_UH-JLgVBdzrYKk0Zqm3rMjcaw
